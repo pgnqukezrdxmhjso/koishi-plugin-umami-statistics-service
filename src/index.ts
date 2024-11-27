@@ -119,8 +119,8 @@ class UmamiStatisticsService extends Service {
             !fileName ||
             !fileName.startsWith(basePath) ||
             fileName.includes("umami-statistics-service") ||
-            fileName.includes("@cordisjs\\") ||
-            fileName.includes("@koishijs\\") ||
+            fileName.includes("@cordisjs" + path.sep) ||
+            fileName.includes("@koishijs" + path.sep) ||
             fileName.startsWith("node:")
           );
         })
@@ -138,6 +138,7 @@ class UmamiStatisticsService extends Service {
       }
       callerPath = path.join(basePath, callerName);
     } catch (e) {
+      this._ctx.logger.error(e);
     } finally {
       Error.prepareStackTrace = prepareStackTrace;
       Error.stackTraceLimit = stackTraceLimit;
