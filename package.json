@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-umami-statistics-service",
   "description": "Umami is a simple, fast, privacy-focused alternative to Google Analytics.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -29,7 +29,7 @@
     "plugin"
   ],
   "peerDependencies": {
-    "koishi": "^4.18.0"
+    "koishi": "^4.18.2"
   },
   "koishi": {
     "service": {
